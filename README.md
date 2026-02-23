@@ -150,4 +150,3 @@ Identity Service is a stateless authentication microservice that:
 	•	Enables role-based access control across the platform
 	•	Integrates with API Gateway for secure routing
 
-	•	Full root project README explaining entire architecture
