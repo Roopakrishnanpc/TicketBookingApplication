@@ -1,0 +1,18 @@
+CREATE DATABASE identity_db;
+USE identity_db;
+CREATE TABLE users (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL,
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE refresh_token (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    token VARCHAR(255),
+    email VARCHAR(150),
+    expiry_date TIMESTAMP
+);
+SHOW TABLES;
